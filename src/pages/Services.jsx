@@ -1,75 +1,118 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
-function Services() {
+import smallRepairsImg from "/service1.jpg";
+import buildingImg from "/service2.jpg";
+import gardeningImg from "/service3.jpg";
+import outdoorImg from "/service4.jpg";
+
+const services = [
+  {
+    id: 1,
+    title: "Small Repairs & Home Improvements",
+    short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
+    description:
+      "From fixing loose shelves and doors that don’t close properly to patching small wall damages and refreshing tired areas, YB handles the small jobs that bigger companies often ignore. You get precise, careful work from someone who respects your space and leaves everything clean and tidy.",
+    image: smallRepairsImg,
+  },
+  {
+    id: 2,
+    title: "Building & Maintenance",
+    short: "Reliable support for structural work and ongoing maintenance.",
+    description:
+      "Whether you need help with non-structural brickwork, small masonry projects, tiling, or regular maintenance, YB offers consistent, high-quality workmanship. The focus is on solid, long-lasting results and clear communication, so you always know what is happening on your project.",
+    image: buildingImg,
+  },
+  {
+    id: 3,
+    title: "Gardening & Outdoor Care",
+    short: "Keep your outdoor spaces healthy, tidy, and enjoyable all year round.",
+    description:
+      "From lawn care and hedge trimming to planting, seasonal clean-ups, and basic landscape improvements, YB helps your garden look well kept and welcoming. You work with the same trusted person who already knows your space and preferences, so every visit is more efficient.",
+    image: gardeningImg,
+  },
+  {
+    id: 4,
+    title: "Combined Projects & Multi-Service Jobs",
+    short: "One trusted professional for projects that involve both building and gardening.",
+    description:
+      "Need to repair a wall, adjust paving, and refresh the surrounding garden in one go? YB can plan and execute multi-step projects that mix indoor and outdoor work. Instead of calling different contractors, you deal with one person who coordinates the whole process and keeps everything aligned with your timeline and budget.",
+    image: outdoorImg,
+  },
+];
+
+export default function Services() {
   return (
-    <div className="bg-brand-light">
-      <section className="mx-auto max-w-6xl px-4 py-10 md:py-16">
-        <h1 className="mb-3 text-2xl font-semibold text-brand-dark md:text-3xl">
-          Services
-        </h1>
-        <p className="max-w-2xl text-sm text-slate-700 md:text-base">
-          YB offers a flexible range of building and gardening services, adapted
-          to the size and needs of your space. You can book a single service or
-          combine several into one project for a smoother, more efficient
-          workflow.
-        </p>
+    <main className="bg-brand-light min-h-screen font-body">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-20">
+        <header className="mb-10 sm:mb-12 lg:mb-16 text-brand-dark">
+          <p className="text-xs tracking-[0.2em] uppercase font-semibold text-brand-green mb-2">
+            Services
+          </p>
+          <h1 className="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
+            Building & Gardening Services,
+            <span className="block">All In One Place.</span>
+          </h1>
+          <p className="text-sm sm:text-base text-brand-dark/80 max-w-2xl">
+            From small repairs and home improvements to gardening and outdoor
+            care, YB offers multi-service support handled by one trusted
+            professional. Choose the service that fits your project or combine
+            several for a complete, streamlined solution.
+          </p>
+        </header>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-xl bg-white p-5 shadow-card">
-            <h2 className="mb-2 text-lg font-semibold text-brand-dark">
-              Small Repairs &amp; Fixes
-            </h2>
-            <p className="text-sm text-slate-700">
-              Furniture assembly, wall touch-ups, small damage repairs, doors,
-              frames, and other everyday fixes that keep your home in good
-              shape.
-            </p>
-          </div>
+        <div className="space-y-8 sm:space-y-10 lg:space-y-12">
+          {services.map((service, index) => (
+            <article
+              key={service.id}
+              className="bg-white rounded-xl shadow-md shadow-brand-dark/5 overflow-hidden"
+            >
+              {/* wrapper: verticale su mobile, orizzontale su md+ */}
+              <div className="flex flex-col md:flex-row md:items-stretch">
+                {/* testo */}
+                <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
+                  <h2 className="font-heading font-semibold text-xl sm:text-2xl text-brand-dark mb-2">
+                    {service.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-brand-dark/80 mb-3">
+                    {service.short}
+                  </p>
+                  <p className="text-sm sm:text-base text-brand-dark/80 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
 
-          <div className="rounded-xl bg-white p-5 shadow-card">
-            <h2 className="mb-2 text-lg font-semibold text-brand-dark">
-              Building &amp; Maintenance
-            </h2>
-            <p className="text-sm text-slate-700">
-              Interior and exterior work, structural improvements, regular
-              maintenance, and project-based tasks coordinated by one person who
-              knows your space.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-white p-5 shadow-card">
-            <h2 className="mb-2 text-lg font-semibold text-brand-dark">
-              Gardening &amp; Outdoor Care
-            </h2>
-            <p className="text-sm text-slate-700">
-              Lawn care, plant maintenance, seasonal clean-ups, and small garden
-              projects designed to keep your outdoor areas tidy and enjoyable.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-white p-5 shadow-card">
-            <h2 className="mb-2 text-lg font-semibold text-brand-dark">
-              Custom Multi-Service Projects
-            </h2>
-            <p className="text-sm text-slate-700">
-              Need repairs, building work, and garden care in one go? YB can
-              combine multiple services into a single, coordinated project so
-              you only deal with one person from start to finish.
-            </p>
-          </div>
+                {/* immagine */}
+                <div className="md:w-1/2 relative">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-56 sm:h-64 md:h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
-        <div className="mt-10">
-          <Link
-            to="/contact"
-            className="inline-flex rounded-full bg-brand-dark px-8 py-3 text-sm font-medium text-white shadow-sm hover:bg-black"
+        {/* micro-CTA finale */}
+        <section className="mt-12 sm:mt-16 lg:mt-20 text-center">
+          <h2 className="font-heading font-semibold text-2xl sm:text-3xl text-brand-dark mb-3">
+            Not sure which service you need?
+          </h2>
+          <p className="text-sm sm:text-base text-brand-dark/80 max-w-xl mx-auto mb-6">
+            You don’t have to choose everything in advance. Tell YB what you’d
+            like to improve, and together you can decide which combination of
+            building and gardening services fits your space, budget, and timing
+            best.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full px-6 py-3 text-sm sm:text-base font-semibold font-heading bg-brand-dark text-white hover:bg-brand-green transition-colors"
           >
-            Request a Custom Quote
-          </Link>
-        </div>
+            Get a Free Quote
+          </a>
+        </section>
       </section>
-    </div>
+    </main>
   );
 }
-
-export default Services;

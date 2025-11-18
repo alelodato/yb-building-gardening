@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="bg-brand-light">
       {/* HERO */}
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-slate-200">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 md:grid md:grid-cols-2 md:items-center md:gap-12 md:py-16">
           {/* Copy */}
           <div className="space-y-5">
@@ -46,9 +46,9 @@ function Home() {
       </section>
 
       {/* VANTAGGIO MULTI-SERVIZIO */}
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-10 text-center md:py-14">
-          <p className="text-lg text-semibold-700 md:text-2xl">
+      <section className="border-b border-slate-200 bg-[url('/homep-bg.jpg')] bg-cover bg-center">
+        <div className="px-4 py-10 text-center md:py-14 bg-gradient-to-tr from-black/90 to-black/60">
+          <p className="text-lg text-semibold text-brand-light md:text-2xl font-heading">
             Hiring one person who can handle multiple services saves you time,
             money, and stress. Instead of coordinating different companies, you
             get a single reliable professional who knows your space, understands
@@ -58,7 +58,7 @@ function Home() {
       </section>
 
       {/* ABOUT YASSIN */}
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-slate-200">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center md:gap-12 md:py-14">
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-brand-dark md:text-2xl">
@@ -136,8 +136,8 @@ function Home() {
           </div>
 
           {/* Micro sezione sotto le cards */}
-          <div className="mt-8 flex flex-col items-center gap-3 text-center">
-            <p className="max-w-2xl text-xs text-slate-600 md:text-sm">
+          <div className="mt-8 flex flex-col items-center gap-3 text-center">          
+            <p className="max-w-2xl text-s text-slate-600 md:text-sm">
               Need something that doesn&apos;t fit into a single category? YB can
               combine services — from repairs and maintenance to garden work —
               so you don&apos;t have to coordinate multiple people for one project.
@@ -153,9 +153,9 @@ function Home() {
       </section>
 
       {/* WHY CHOOSE YB */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-12 text-center md:py-16">
-          <p className="text-sm text-slate-700 md:text-base">
+      <section className="bg-[url('/cta-bg.jpg')] bg-cover bg-center">
+        <div className="text-center bg-gradient-to-tr from-black/80 to-black/50 px-6 py-8 w-full flex flex-col items-center font-heading">
+          <p className="text-lg text-white md:text-2xl">
             Hiring YB it&apos;s a practical, cost-effective choice that gives
             you peace of mind from the first message to the final result.
             Get your free quote today and experience the convenience of
