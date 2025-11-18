@@ -36,7 +36,7 @@ function Navbar() {
         {/* Mobile: solo CTA piccola che porta a contact, nav semplice in scroll */}
         <Link
           to="/contact"
-          className="inline-flex items-center justify-center rounded-full bg-brand-dark px-3 py-1.5 text-xs font-medium text-white shadow-sm md:hidden"
+          className="inline-flex items-center justify-center rounded-full bg-brand-dark px-6 py-2.5 text-s font-medium text-white shadow-sm md:hidden"
         >
           Quote
         </Link>

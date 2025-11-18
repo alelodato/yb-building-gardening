@@ -8,9 +8,6 @@ function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 md:grid md:grid-cols-2 md:items-center md:gap-12 md:py-16">
           {/* Copy */}
           <div className="space-y-5">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-brand-green">
-              YB Building &amp; Gardening
-            </p>
             <h1 className="text-3xl font-semibold leading-tight text-brand-dark md:text-4xl">
               Professional Building &amp; Gardening Services.
               <br />
@@ -51,14 +48,11 @@ function Home() {
       {/* VANTAGGIO MULTI-SERVIZIO */}
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-4xl px-4 py-10 text-center md:py-14">
-          <p className="text-sm text-slate-700 md:text-base">
+          <p className="text-lg text-semibold-700 md:text-2xl">
             Hiring one person who can handle multiple services saves you time,
             money, and stress. Instead of coordinating different companies, you
             get a single reliable professional who knows your space, understands
-            your needs, and delivers consistent, high-quality results. Whether
-            it&apos;s small repairs, building work, or taking care of your garden,
-            you can count on a smooth and efficient experience from start to
-            finish.
+            your needs, and delivers consistent, high-quality results.
           </p>
         </div>
       </section>
@@ -161,20 +155,12 @@ function Home() {
       {/* WHY CHOOSE YB */}
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-4 py-12 text-center md:py-16">
-          <h2 className="mb-4 text-xl font-semibold text-brand-dark md:text-2xl">
-            WHY CHOOSE YB
-          </h2>
           <p className="text-sm text-slate-700 md:text-base">
-            Hiring YB means choosing a reliable, multi-skilled professional who
-            can take care of everything your home or outdoor space needs.
-            Instead of dealing with multiple contractors, schedules, and quotes,
-            you get one trusted expert who understands your environment, listens
-            to your priorities, and keeps the entire workflow smooth and
-            consistent. With YB, you benefit from faster turnarounds, clear
-            communication, and a high level of workmanship across every service
-            — from repairs, building work, and improvements to garden care and
-            maintenance. It&apos;s a practical, cost-effective choice that gives
+            Hiring YB it&apos;s a practical, cost-effective choice that gives
             you peace of mind from the first message to the final result.
+            Get your free quote today and experience the convenience of
+            having all your building and gardening needs handled by one trusted
+            expert.
           </p>
 
           <div className="mt-8">

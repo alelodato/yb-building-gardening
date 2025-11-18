@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import BackToTop from "./components/BackToTop.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
@@ -8,6 +10,7 @@ import Contact from "./pages/Contact.jsx";
 function App() {
   return (
     <div className="min-h-screen flex flex-col bg-brand-light">
+      <ScrollToTop />
       <Navbar />
 
       <main className="flex-1">
@@ -19,6 +22,7 @@ function App() {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 }
