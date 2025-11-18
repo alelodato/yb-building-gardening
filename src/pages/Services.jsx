@@ -1,42 +1,51 @@
 import React from "react";
 
-import smallRepairsImg from "/service1.jpg";
-import buildingImg from "/service2.jpg";
-import gardeningImg from "/service3.jpg";
-import outdoorImg from "/service4.jpg";
+import liningImg from "/lining.webp";
+import flooringImg from "/flooring.webp";
+import roofingImg from "/roofing.webp";
+import outdoorImg from "/garden1.webp";
+import combinedProjectsImg from "/service5.jpg";
 
 const services = [
   {
     id: 1,
-    title: "Small Repairs & Home Improvements",
+    title: "Dry Lining",
     short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
     description:
-      "From fixing loose shelves and doors that don’t close properly to patching small wall damages and refreshing tired areas, YB handles the small jobs that bigger companies often ignore. You get precise, careful work from someone who respects your space and leaves everything clean and tidy.",
-    image: smallRepairsImg,
+      "Professional dry lining for both small and large projects. YB handles plasterboard installation, partition walls, ceiling systems, repairs, and smooth finishing ready for painting. A clean, precise service ideal for renovations, extensions, and new builds.",
+    image: liningImg,
   },
   {
     id: 2,
-    title: "Building & Maintenance",
+    title: "Flooring Installation & Repair",
     short: "Reliable support for structural work and ongoing maintenance.",
     description:
-      "Whether you need help with non-structural brickwork, small masonry projects, tiling, or regular maintenance, YB offers consistent, high-quality workmanship. The focus is on solid, long-lasting results and clear communication, so you always know what is happening on your project.",
-    image: buildingImg,
+      "From laminate to hardwood to vinyl, YB delivers high-quality flooring installation and repair. You get precise cutting, secure fitting, and a flawless finish that transforms any room. Ideal for home upgrades, renovations, and full room makeovers.",
+    image: flooringImg,
   },
   {
     id: 3,
+    title: "Roofing & Waterproofing",
+    short: "One trusted professional for projects that involve both building and gardening.",
+    description:
+      "Reliable roofing services including repairs, tile replacement, leak fixing, structural checks, and full waterproof coating to protect your home from weather damage. YB ensures long-lasting protection and high-quality workmanship on every roof.",
+    image: roofingImg,
+  },
+  {
+    id: 4,
     title: "Gardening & Outdoor Care",
     short: "Keep your outdoor spaces healthy, tidy, and enjoyable all year round.",
     description:
       "From lawn care and hedge trimming to planting, seasonal clean-ups, and basic landscape improvements, YB helps your garden look well kept and welcoming. You work with the same trusted person who already knows your space and preferences, so every visit is more efficient.",
-    image: gardeningImg,
+    image: outdoorImg,
   },
   {
-    id: 4,
+    id: 5,
     title: "Combined Projects & Multi-Service Jobs",
     short: "One trusted professional for projects that involve both building and gardening.",
     description:
       "Need to repair a wall, adjust paving, and refresh the surrounding garden in one go? YB can plan and execute multi-step projects that mix indoor and outdoor work. Instead of calling different contractors, you deal with one person who coordinates the whole process and keeps everything aligned with your timeline and budget.",
-    image: outdoorImg,
+    image: combinedProjectsImg,
   },
 ];
 

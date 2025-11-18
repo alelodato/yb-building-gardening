@@ -87,39 +87,47 @@ function Home() {
       {/* CARDS SERVIZI */}
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {/* Card 1 */}
             <div className="flex flex-col rounded-xl bg-white shadow-card">
-              <div className="h-40 rounded-t-xl bg-[url('/small-r.webp')] bg-cover bg-center" />
+              <div className="h-40 rounded-t-xl bg-[url('/lining-card.jpg')] bg-cover bg-center" />
               <div className="space-y-2 p-4">
                 <h3 className="text-sm font-semibold text-brand-dark">
-                  Small Repairs
+                  Dry Lining
                 </h3>
                 <p className="text-xs text-slate-600 md:text-sm">
-                  From fixing small issues to handling quick touch-ups, YB takes
-                  care of the small jobs that make a big difference. You get
-                  reliable work, always handled without extra calls.
+                  Plasterboard installation, partition walls, ceilings, repairs, and smooth finishing ready for painting.
                 </p>
               </div>
             </div>
 
             {/* Card 2 */}
             <div className="flex flex-col rounded-xl bg-white shadow-card">
-              <div className="h-40 rounded-t-xl bg-[url('/card2.webp')] bg-cover bg-center" />
+              <div className="h-40 rounded-t-xl bg-[url('/flooring-card.jpg')] bg-cover bg-center" />
               <div className="space-y-2 p-4">
                 <h3 className="text-sm font-semibold text-brand-dark">
-                  Building &amp; Maintenance
+                  Flooring Installation & Repair
                 </h3>
                 <p className="text-xs text-slate-600 md:text-sm">
-                  Whether it&apos;s structural work, new installations, or
-                  regular upkeep, YB covers multiple building needs with
-                  consistent quality and a single point of contact for all your
-                  projects.
+                  Laminate, vinyl, or hardwood installation with clean, precise fitting and durable results.
                 </p>
               </div>
             </div>
 
             {/* Card 3 */}
+            <div className="flex flex-col rounded-xl bg-white shadow-card">
+              <div className="h-40 rounded-t-xl bg-[url('/service5.jpg')] bg-cover bg-center" />
+              <div className="space-y-2 p-4">
+                <h3 className="text-sm font-semibold text-brand-dark">
+                  Roofing & Waterproofing
+                </h3>
+                <p className="text-xs text-slate-600 md:text-sm">
+                  Roof repairs, tile replacement, leak fixing, and waterproof coatings for long-lasting protection.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4 */}
             <div className="flex flex-col rounded-xl bg-white shadow-card">
               <div className="h-40 rounded-t-xl bg-[url('/garden2.webp')] bg-cover bg-center" />
               <div className="space-y-2 p-4">
