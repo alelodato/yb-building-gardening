@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <img 
-              src="/Logo.svg" 
+              src="/Logo.png" 
               alt="YB Building & Gardening" 
               className="w-60 h-auto object-contain"
             />
@@ -34,7 +34,7 @@ export default function Footer() {
 
       {/* BOTTOM TEXT */}
       <div className="border-t border-gray-200 py-6 text-center text-gray-500 text-sm">
-        Website by <span className="font-medium text-gray-700">Alessio Lodato</span>
+        Website by <span className="font-medium text-gray-700"><a href="https://www.alessiolodato.dev">Alessio Lodato</a></span>
       </div>
     </footer>
   );

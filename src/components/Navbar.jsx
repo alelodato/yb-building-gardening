@@ -9,7 +9,7 @@ function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:py-5">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/Logo.svg" alt="Logo" className="w-60 h-auto object-contain"/>
+          <img src="/Logo.png" alt="Logo" className="w-60 h-auto object-contain"/>
         </Link>
 
         {/* Links desktop */}

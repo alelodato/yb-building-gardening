@@ -40,10 +40,10 @@ function Home() {
 
           {/* Image grid */}
           <div className="grid grid-cols-2 grid-rows-2 gap-2 md:gap-3">
-            <div className="h-32 rounded-lg bg-[url('https://images.pexels.com/photos/6476584/pexels-photo-6476584.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center md:h-40" />
-            <div className="h-32 rounded-lg bg-[url('https://images.pexels.com/photos/8481103/pexels-photo-8481103.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center md:h-40" />
-            <div className="h-32 rounded-lg bg-[url('https://images.pexels.com/photos/4239145/pexels-photo-4239145.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center md:h-40" />
-            <div className="h-32 rounded-lg bg-[url('https://images.pexels.com/photos/5875890/pexels-photo-5875890.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center md:h-40" />
+            <div className="h-32 rounded-lg bg-[url('/lining.webp')] bg-cover bg-center md:h-40" />
+            <div className="h-32 rounded-lg bg-[url('/garden1.webp')] bg-cover bg-center md:h-40" />
+            <div className="h-32 rounded-lg bg-[url('/flooring.webp')] bg-cover bg-center md:h-40" />
+            <div className="h-32 rounded-lg bg-[url('/roofing.webp')] bg-cover bg-center md:h-40" />
           </div>
         </div>
       </section>
@@ -86,7 +86,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="h-60 rounded-xl bg-[url('https://images.pexels.com/photos/6476581/pexels-photo-6476581.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center shadow-card md:h-72" />
+          <div className="h-60 rounded-xl bg-[url('/yas.webp')] bg-cover bg-center shadow-card md:h-72" />
         </div>
       </section>
 
@@ -96,7 +96,7 @@ function Home() {
           <div className="grid gap-6 md:grid-cols-3">
             {/* Card 1 */}
             <div className="flex flex-col rounded-xl bg-white shadow-card">
-              <div className="h-40 rounded-t-xl bg-[url('https://images.pexels.com/photos/3640935/pexels-photo-3640935.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center" />
+              <div className="h-40 rounded-t-xl bg-[url('/small-r.webp')] bg-cover bg-center" />
               <div className="space-y-2 p-4">
                 <h3 className="text-sm font-semibold text-brand-dark">
                   Small Repairs
@@ -111,7 +111,7 @@ function Home() {
 
             {/* Card 2 */}
             <div className="flex flex-col rounded-xl bg-white shadow-card">
-              <div className="h-40 rounded-t-xl bg-[url('https://images.pexels.com/photos/5854190/pexels-photo-5854190.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center" />
+              <div className="h-40 rounded-t-xl bg-[url('/card2.webp')] bg-cover bg-center" />
               <div className="space-y-2 p-4">
                 <h3 className="text-sm font-semibold text-brand-dark">
                   Building &amp; Maintenance
@@ -127,7 +127,7 @@ function Home() {
 
             {/* Card 3 */}
             <div className="flex flex-col rounded-xl bg-white shadow-card">
-              <div className="h-40 rounded-t-xl bg-[url('https://images.pexels.com/photos/5878457/pexels-photo-5878457.jpeg?auto=compress&cs=tinysrgb&w=800')] bg-cover bg-center" />
+              <div className="h-40 rounded-t-xl bg-[url('/garden2.webp')] bg-cover bg-center" />
               <div className="space-y-2 p-4">
                 <h3 className="text-sm font-semibold text-brand-dark">
                   Gardening Services
