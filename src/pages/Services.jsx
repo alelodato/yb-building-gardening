@@ -5,6 +5,7 @@ import flooringImg from "/flooring.webp";
 import roofingImg from "/roofing.webp";
 import outdoorImg from "/garden1.webp";
 import combinedProjectsImg from "/multi-service.webp";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -13,7 +14,7 @@ const services = [
     short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
     description:
       "Professional dry lining for both small and large projects. YB handles plasterboard installation, partition walls, ceiling systems, repairs, and smooth finishing ready for painting. A clean, precise service ideal for renovations, extensions, and new builds.",
-    image:furnitureImg,
+    image: furnitureImg,
   },
   {
     id: "dry-lining",
@@ -79,39 +80,47 @@ export default function Services() {
 
         <div className="space-y-8 sm:space-y-10 lg:space-y-12">
           {services.map((service, index) => (
-            <article
-              key={service.id}
-              id={service.id}
-              className="bg-white rounded-xl shadow-md shadow-brand-dark/5 overflow-hidden"
+            <Link
+              to="/contact"
+              state={{
+                selectedService: service.title,
+                messagePreset: `I’m interested in ${service.title.toLowerCase()} for...`,
+              }}
             >
-              {/* wrapper: verticale su mobile, orizzontale su md+ */}
-              <div className="flex flex-col md:flex-row md:items-center md:h-[360px] h-auto">
-                {/* testo */}
-                <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
-                  <h2 className="font-heading font-semibold text-xl sm:text-2xl text-brand-dark mb-2">
-                    {service.title}
-                  </h2>
-                  <p className="text-sm sm:text-base text-brand-dark/80 mb-3">
-                    {service.short}
-                  </p>
-                  <p className="text-sm sm:text-base text-brand-dark/80 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
 
-                {/* immagine */}
-                <div className="md:w-1/2 relative">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="h-56 sm:h-64 md:h-full w-full object-cover"
-                  />
+              <article
+                key={service.id}
+                id={service.id}
+                className="bg-white rounded-xl shadow-md shadow-brand-dark/5 overflow-hidden"
+              >
+                {/* wrapper: verticale su mobile, orizzontale su md+ */}
+                <div className="flex flex-col md:flex-row md:items-center md:h-[360px] h-auto">
+                  {/* testo */}
+                  <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
+                    <h2 className="font-heading font-semibold text-xl sm:text-2xl text-brand-dark mb-2">
+                      {service.title}
+                    </h2>
+                    <p className="text-sm sm:text-base text-brand-dark/80 mb-3">
+                      {service.short}
+                    </p>
+                    <p className="text-sm sm:text-base text-brand-dark/80 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* immagine */}
+                  <div className="md:w-1/2 relative">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="h-56 sm:h-64 md:h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
-
         {/* micro-CTA finale */}
         <section className="mt-12 sm:mt-16 lg:mt-20 text-center">
           <h2 className="font-heading font-semibold text-2xl sm:text-3xl text-brand-dark mb-3">

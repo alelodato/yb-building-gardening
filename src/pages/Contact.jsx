@@ -1,4 +1,20 @@
+// src/pages/Contact.jsx
+import { useLocation } from "react-router-dom";
+
 function Contact() {
+  // Leggo eventuale stato passato dalle card dei servizi
+  const location = useLocation();
+  const { selectedService, messagePreset } = location.state || {};
+
+  // Placeholder dinamico per la textarea
+  const messagePlaceholder =
+    messagePreset ||
+    "Describe your space, what needs to be done, and your preferred timing.";
+
+  // Valore di default per il select
+  const defaultService =
+    selectedService || "Furnitures Assembly & Small Repairs";
+
   return (
     <div className="bg-brand-light">
       <section className="mx-auto max-w-3xl px-4 py-10 md:py-16">
@@ -28,6 +44,7 @@ function Contact() {
                 required
               />
             </div>
+
             <div>
               <label
                 htmlFor="email"
@@ -43,8 +60,14 @@ function Contact() {
                 required
               />
             </div>
+
             <div>
-              <label htmlFor="phone" className="mb-1 block text-xs font-medium text-slate-700">Phone (Optional)</label>
+              <label
+                htmlFor="phone"
+                className="mb-1 block text-xs font-medium text-slate-700"
+              >
+                Phone (Optional)
+              </label>
               <input
                 id="phone"
                 type="tel"
@@ -65,10 +88,12 @@ function Contact() {
               id="service"
               className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
               required
+              // qui avviene la magia: se arrivi da una card, questo è già selezionato
+              defaultValue={defaultService}
             >
               <option>Furnitures Assembly &amp; Small Repairs</option>
               <option>Dry Lining</option>
-              <option>Flooring Installation & Repair</option>
+              <option>Flooring Installation &amp; Repair</option>
               <option>Roofing &amp; Waterproofing</option>
               <option>Gardening &amp; outdoor care</option>
               <option>Multiple services / custom project</option>
@@ -79,7 +104,6 @@ function Contact() {
             <label
               htmlFor="message"
               className="mb-1 block text-xs font-medium text-slate-700"
-              required
             >
               Project details
             </label>
@@ -87,7 +111,7 @@ function Contact() {
               id="message"
               rows={5}
               className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
-              placeholder="Describe your space, what needs to be done, and your preferred timing."
+              placeholder={messagePlaceholder}
             />
           </div>
 
