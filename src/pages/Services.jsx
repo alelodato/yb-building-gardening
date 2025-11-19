@@ -1,14 +1,22 @@
 import React from "react";
-
+import furnitureImg from "/small-r.webp";
 import liningImg from "/lining.webp";
 import flooringImg from "/flooring.webp";
 import roofingImg from "/roofing.webp";
 import outdoorImg from "/garden1.webp";
-import combinedProjectsImg from "/service5.jpg";
+import combinedProjectsImg from "/multi-service.webp";
 
 const services = [
   {
-    id: 1,
+    id: "small-repairs",
+    title: "Furnitures Assembly & Small Repairs",
+    short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
+    description:
+      "Professional dry lining for both small and large projects. YB handles plasterboard installation, partition walls, ceiling systems, repairs, and smooth finishing ready for painting. A clean, precise service ideal for renovations, extensions, and new builds.",
+    image:furnitureImg,
+  },
+  {
+    id: "dry-lining",
     title: "Dry Lining",
     short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
     description:
@@ -16,7 +24,7 @@ const services = [
     image: liningImg,
   },
   {
-    id: 2,
+    id: "flooring",
     title: "Flooring Installation & Repair",
     short: "Reliable support for structural work and ongoing maintenance.",
     description:
@@ -24,7 +32,7 @@ const services = [
     image: flooringImg,
   },
   {
-    id: 3,
+    id: "roofing",
     title: "Roofing & Waterproofing",
     short: "One trusted professional for projects that involve both building and gardening.",
     description:
@@ -32,7 +40,7 @@ const services = [
     image: roofingImg,
   },
   {
-    id: 4,
+    id: "gardening",
     title: "Gardening & Outdoor Care",
     short: "Keep your outdoor spaces healthy, tidy, and enjoyable all year round.",
     description:
@@ -40,7 +48,7 @@ const services = [
     image: outdoorImg,
   },
   {
-    id: 5,
+    id: "multi-service",
     title: "Combined Projects & Multi-Service Jobs",
     short: "One trusted professional for projects that involve both building and gardening.",
     description:
@@ -73,10 +81,11 @@ export default function Services() {
           {services.map((service, index) => (
             <article
               key={service.id}
+              id={service.id}
               className="bg-white rounded-xl shadow-md shadow-brand-dark/5 overflow-hidden"
             >
               {/* wrapper: verticale su mobile, orizzontale su md+ */}
-              <div className="flex flex-col md:flex-row md:items-stretch">
+              <div className="flex flex-col md:flex-row md:items-center md:h-[360px] h-auto">
                 {/* testo */}
                 <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
                   <h2 className="font-heading font-semibold text-xl sm:text-2xl text-brand-dark mb-2">

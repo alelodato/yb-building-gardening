@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToHash from "./components/ScrollToHash.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import BackToTop from "./components/BackToTop.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -13,6 +14,7 @@ import Privacy from "./pages/Privacy.jsx";
 function App() {
   return (
     <div className="min-h-screen flex flex-col bg-brand-light">
+      <ScrollToHash />
       <ScrollToTop />
       <Navbar />
 

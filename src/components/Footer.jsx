@@ -11,6 +11,7 @@ export default function Footer() {
 
           <p className="text-dark font-body text-sm">yb.services@mail.com</p>
           <p className="text-dark font-body text-sm">(+44) 7860 719 081</p>
+          <p className="text-dark font-body text-sm">Cambridge, UK</p>
         </div>
 
         {/* CENTER LINKS */}
@@ -35,7 +36,7 @@ export default function Footer() {
         {/* BOTTOM */}
         <p className="text-dark/60 text-xs font-body">
         Website by
-        <a href="https://www.alessiolodato.dev" target="_blank" rel="noopener noreferrer"> Alessio Lodato</a>
+        <a href="https://www.alessiolodato.dev" target="_blank" rel="noopener noreferrer" className="text-sm"> Alessio Lodato</a>
         </p>
       </div>
     </footer>
