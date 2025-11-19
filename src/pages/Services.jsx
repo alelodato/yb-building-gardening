@@ -79,7 +79,7 @@ export default function Services() {
         </header>
 
         <div className="space-y-8 sm:space-y-10 lg:space-y-12">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Link
               to="/contact"
               state={{
@@ -91,7 +91,7 @@ export default function Services() {
               <article
                 key={service.id}
                 id={service.id}
-                className="bg-white rounded-xl shadow-md shadow-brand-dark/5 overflow-hidden"
+                className="bg-white rounded-xl shadow-md shadow-brand-dark/5 overflow-hidden my-10 hover:shadow-lg hover:shadow-brand-dark/10 transition-shadow"
               >
                 {/* wrapper: verticale su mobile, orizzontale su md+ */}
                 <div className="flex flex-col md:flex-row md:items-center md:h-[360px] h-auto">

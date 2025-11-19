@@ -23,13 +23,13 @@ export default function Footer() {
         {/* SOCIAL ICONS */}
         <div className="flex gap-6 mb-6">
           <a href="#" aria-label="Instagram" className="text-dark hover:text-brand-green transition-colors text-xl">
-           <i class="fa-brands fa-instagram"></i>
+           <i className="fa-brands fa-instagram"></i>
           </a>
           <a href="#" aria-label="LinkedIn" className="text-dark hover:text-brand-green transition-colors text-xl">
-          <i class="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-linkedin"></i>
           </a>
           <a href="#" aria-label="Facebook" className="text-dark hover:text-brand-green transition-colors text-xl">
-          <i class="fa-brands fa-facebook-f"></i>
+          <i className="fa-brands fa-facebook-f"></i>
           </a>
         </div>
 

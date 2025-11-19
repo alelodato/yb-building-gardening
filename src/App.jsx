@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-light">
-      {loading ? <Loader /> : <Routes />}
+      {loading && <Loader />}
       <ScrollToHash />
       <ScrollToTop />
       <Navbar />
