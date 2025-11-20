@@ -16,18 +16,18 @@ function Contact() {
     selectedService || "Furnitures Assembly & Small Repairs";
 
   return (
-    <div className="bg-brand-light">
-      <section className="mx-auto max-w-3xl px-4 py-10 md:py-16">
-        <h1 className="mb-3 text-2xl font-semibold-heading text-brand-dark md:text-4xl">
+    <div className="bg-[url('/contact-bg.webp')] bg-cover bg-center">
+      <section className=" bg-gradient-to-tr from-black/90 to-black/70 w-full px-4 py-10 md:py-16">
+        <h1 className="mb-3 text-2xl font-semibold-heading text-brand-light md:text-4xl text-center mx-auto">
           Get a Free Quote
         </h1>
-        <p className="mb-8 max-w-2xl text-sm text-slate-700 md:text-base">
+        <p className="mb-8 max-w-2xl text-base md:text-lg text-brand-light text-center mx-auto">
           Tell YB what you need help with — building, repairs, gardening, or a
           mix of services. You&apos;ll get a clear, no-obligation quote and a
           realistic timeline based on your project.
         </p>
 
-        <form className="space-y-5 rounded-xl bg-white p-6 shadow-card">
+        <form className="space-y-5 rounded-xl bg-white p-6 shadow-card mx-auto max-w-3xl">
           <div className="grid gap-4 md:grid-cols-1">
             <div>
               <label
