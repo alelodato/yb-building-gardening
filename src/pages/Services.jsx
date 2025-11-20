@@ -11,23 +11,23 @@ const services = [
   {
     id: "small-repairs",
     title: "Furnitures Assembly & Small Repairs",
-    short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
+    short: "Need to assemble a new furniture? YB can help you with that, also as quick fixes and upgrades that keep your home in shape without the hassle.",
     description:
-      "Professional dry lining for both small and large projects. YB handles plasterboard installation, partition walls, ceiling systems, repairs, and smooth finishing ready for painting. A clean, precise service ideal for renovations, extensions, and new builds.",
+      "From assembling new furniture to repairing fixtures, fittings, and small household issues, YB delivers fast and reliable handyman support. Ideal for tenants, homeowners, and anyone who wants practical, hassle-free solutions handled with precision.",
     image: furnitureImg,
   },
   {
     id: "dry-lining",
     title: "Dry Lining",
-    short: "Quick fixes and upgrades that keep your home in shape without the hassle.",
+    short: "Professional dry lining for clean, smooth walls and precise interior finishes.",
     description:
       "Professional dry lining for both small and large projects. YB handles plasterboard installation, partition walls, ceiling systems, repairs, and smooth finishing ready for painting. A clean, precise service ideal for renovations, extensions, and new builds.",
     image: liningImg,
   },
   {
     id: "flooring",
-    title: "Flooring Installation & Repair",
-    short: "Reliable support for structural work and ongoing maintenance.",
+    title: "Floor Installation & Repair",
+    short: "High quality flooring installation and repair for durable, clean, and perfectly finished interiors.",
     description:
       "From laminate to hardwood to vinyl, YB delivers high-quality flooring installation and repair. You get precise cutting, secure fitting, and a flawless finish that transforms any room. Ideal for home upgrades, renovations, and full room makeovers.",
     image: flooringImg,
@@ -35,7 +35,7 @@ const services = [
   {
     id: "roofing",
     title: "Roofing & Waterproofing",
-    short: "One trusted professional for projects that involve both building and gardening.",
+    short: "Reliable roofing and waterproofing solutions that protect your home from leaks, weather damage, and long-term wear.",
     description:
       "Reliable roofing services including repairs, tile replacement, leak fixing, structural checks, and full waterproof coating to protect your home from weather damage. YB ensures long-lasting protection and high-quality workmanship on every roof.",
     image: roofingImg,
@@ -64,10 +64,10 @@ export default function Services() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-20">
         <header className="mb-10 sm:mb-12 lg:mb-16 text-brand-dark space-y-5">
           <h1 className="text-3xl font-heading font-semibold leading-tight text-brand-dark md:text-4xl">
-              Professional <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services.
-              <br />
-              <span className="text-4xl lg:text-5xl">All In One Place.</span>
-            </h1>
+            Professional <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services.
+            <br />
+            <span className="text-4xl lg:text-5xl">All In One Place.</span>
+          </h1>
           <p className="text-sm sm:text-base text-brand-dark/80 max-w-2xl">
             YB offers multi-service support handled by one trusted
             professional. Choose the service that fits your project or combine
