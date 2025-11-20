@@ -9,9 +9,9 @@ function Home() {
           {/* Copy */}
           <div className="space-y-5">
             <h1 className="text-3xl font-semibold leading-tight text-brand-dark md:text-4xl">
-              Professional Building &amp; Gardening Services.
+              Professional <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services.
               <br />
-              <span className="text-brand-red">All In One Place.</span>
+              <span className="text-5xl">All In One Place.</span>
             </h1>
             <p className="text-sm text-slate-600 md:text-base">
               From small repairs and home improvements to gardening and outdoor
@@ -61,7 +61,7 @@ function Home() {
       <section className="border-b border-slate-200">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center md:gap-12 md:py-14">
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-brand-dark md:text-2xl">
+            <h2 className="text-2xl font-semibold-heading text-brand-dark md:text-2xl">
               Meet Yassin Barka
             </h2>
             <p className="text-sm text-slate-700 md:text-base">
@@ -79,8 +79,11 @@ function Home() {
               job — ensuring quality, trust, and a personal touch at every step.
             </p>
           </div>
-
-          <div className="h-60 rounded-xl bg-[url('/yas.webp')] bg-cover bg-center shadow-card md:h-72" />
+          <img
+            src="/yas.webp"
+            alt="Yassin at work"
+            className="w-full h-80 md:h-[420px] object-contain mx-auto"
+          />
         </div>
       </section>
 

@@ -18,7 +18,7 @@ function Contact() {
   return (
     <div className="bg-brand-light">
       <section className="mx-auto max-w-3xl px-4 py-10 md:py-16">
-        <h1 className="mb-3 text-2xl font-semibold text-brand-dark md:text-3xl">
+        <h1 className="mb-3 text-2xl font-semibold-heading text-brand-dark md:text-4xl">
           Get a Free Quote
         </h1>
         <p className="mb-8 max-w-2xl text-sm text-slate-700 md:text-base">
