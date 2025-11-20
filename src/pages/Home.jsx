@@ -11,7 +11,7 @@ function Home() {
             <h1 className="text-3xl font-semibold leading-tight text-brand-dark md:text-4xl">
               Professional <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services.
               <br />
-              <span className="text-5xl">All In One Place.</span>
+              <span className="lg:text-5xl">All In One Place.</span>
             </h1>
             <p className="text-sm text-slate-600 md:text-base">
               From small repairs and home improvements to gardening and outdoor

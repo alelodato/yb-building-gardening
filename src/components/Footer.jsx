@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center mb-8">
           <img src='/Logo.png' alt="YB Building & Gardening" className="w-28 mb-3" />
 
-          <p className="text-dark font-body text-sm">yb.services@mail.com</p>
+          <p className="text-dark font-body text-sm">email@mail.com</p>
           <p className="text-dark font-body text-sm">(+44) 7860 719 081</p>
           <p className="text-dark font-body text-sm">Cambridge, UK</p>
         </div>

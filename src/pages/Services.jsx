@@ -65,7 +65,7 @@ export default function Services() {
         <header className="mb-10 sm:mb-12 lg:mb-16 text-brand-dark">
           <h1 className="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
             <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services,
-            <span className="block text-6xl">All In One Place.</span>
+            <span className="block lg:text-6xl">All In One Place.</span>
           </h1>
           <p className="text-sm sm:text-base text-brand-dark/80 max-w-2xl">
             From small repairs and home improvements to gardening and outdoor
