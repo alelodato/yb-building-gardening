@@ -8,10 +8,10 @@ function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 md:grid md:grid-cols-2 md:items-center md:gap-12 md:py-16">
           {/* Copy */}
           <div className="space-y-5">
-            <h1 className="text-3xl font-semibold leading-tight text-brand-dark md:text-4xl">
+            <h1 className="text-3xl font-heading font-semibold leading-tight text-brand-dark md:text-4xl">
               Professional <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services.
               <br />
-              <span className="lg:text-5xl">All In One Place.</span>
+              <span className="text-4xl lg:text-5xl">All In One Place.</span>
             </h1>
             <p className="text-sm text-slate-600 md:text-base">
               From small repairs and home improvements to gardening and outdoor

@@ -62,14 +62,14 @@ export default function Services() {
   return (
     <main className="bg-brand-light min-h-screen font-body">
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0 py-12 sm:py-16 lg:py-20">
-        <header className="mb-10 sm:mb-12 lg:mb-16 text-brand-dark">
-          <h1 className="font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4">
-            <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services,
-            <span className="block lg:text-6xl">All In One Place.</span>
-          </h1>
+        <header className="mb-10 sm:mb-12 lg:mb-16 text-brand-dark space-y-5">
+          <h1 className="text-3xl font-heading font-semibold leading-tight text-brand-dark md:text-4xl">
+              Professional <span className="text-brand-red">Building</span> &amp; <span className="text-brand-green">Gardening</span> Services.
+              <br />
+              <span className="text-4xl lg:text-5xl">All In One Place.</span>
+            </h1>
           <p className="text-sm sm:text-base text-brand-dark/80 max-w-2xl">
-            From small repairs and home improvements to gardening and outdoor
-            care, YB offers multi-service support handled by one trusted
+            YB offers multi-service support handled by one trusted
             professional. Choose the service that fits your project or combine
             several for a complete, streamlined solution.
           </p>
