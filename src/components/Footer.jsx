@@ -10,7 +10,7 @@ export default function Footer() {
           <img src='/Logo.png' alt="YB Building & Gardening" className="w-28 mb-3" />
 
           <p className="text-dark font-body text-sm">email@mail.com</p>
-          <p className="text-dark font-body text-sm">(+44) 7860 719 081</p>
+          <p className="text-dark font-body text-sm"><a href="tel:+447860719081" className="font-semibold">07860 719081</a></p>
           <p className="text-dark font-body text-sm">Cambridge, UK</p>
         </div>
 

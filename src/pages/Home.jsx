@@ -57,36 +57,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ABOUT YASSIN */}
-      <section className="border-b border-slate-200">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center md:gap-12 md:py-14">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold-heading text-brand-dark md:text-2xl">
-              Meet Yassin Barka
-            </h2>
-            <p className="text-sm text-slate-700 md:text-base">
-              Yassin Barka is a hands-on professional with years of experience
-              across various sectors of building and home maintenance. His
-              background ranges from small repairs and home improvements to
-              exterior work and gardening, giving him a complete understanding
-              of how different parts of a property work together.
-            </p>
-            <p className="text-sm text-slate-700 md:text-base">
-              Yassin brings precision, reliability, and a strong
-              problem-solving mindset to every project, treating each space with
-              the same care he would give to his own. With YB, clients work
-              directly with the person who plans, executes, and finishes the
-              job — ensuring quality, trust, and a personal touch at every step.
-            </p>
-          </div>
-          <img
-            src="/yas.webp"
-            alt="Yassin at work"
-            className="w-full h-80 md:h-[420px] object-contain mx-auto"
-          />
-        </div>
-      </section>
-
       {/* CARDS SERVIZI */}
       <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
@@ -245,11 +215,7 @@ function Home() {
       <section className="bg-[url('/cta-bg.jpg')] bg-cover bg-center">
         <div className="text-center bg-gradient-to-tr from-black/80 to-black/50 px-6 py-8 w-full flex flex-col items-center font-heading">
           <p className="text-lg text-white md:text-2xl">
-            Hiring YB it&apos;s a practical, cost-effective choice that gives
-            you peace of mind from the first message to the final result.
-            Get your free quote today and experience the convenience of
-            having all your building and gardening needs handled by one trusted
-            expert.
+            If you have roofing leaks, damaged walls, or general maintenance issues, we provide expert practical solutions to fix them properly.Just get in touch with us, and we will walk you through the process—offering a clear price and a fast turnaround. We make home improvements straightforward from start to finish.
           </p>
 
           <div className="mt-8">

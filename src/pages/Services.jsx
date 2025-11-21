@@ -1,4 +1,3 @@
-import React from "react";
 import furnitureImg from "/small-r.webp";
 import liningImg from "/lining.webp";
 import flooringImg from "/flooring.webp";
