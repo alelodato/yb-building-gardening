@@ -94,22 +94,6 @@ function Home() {
                 </div>
               </div>
             </Link>
-            {/* Card 3 */}
-            <Link
-              to="/services#flooring"
-            >
-              <div className="flex flex-col rounded-xl bg-white shadow-card">
-                <div className="h-40 rounded-t-xl bg-[url('/flooring-card.jpg')] bg-cover bg-center" />
-                <div className="space-y-2 p-4">
-                  <h3 className="text-sm font-semibold text-brand-dark">
-                    Flooring Installation & Repair
-                  </h3>
-                  <p className="text-xs text-slate-600 md:text-sm">
-                    Laminate, vinyl, or hardwood installation with clean, precise fitting and durable results.
-                  </p>
-                </div>
-              </div>
-            </Link>
             {/* Card 4 */}
             <Link
               to="/services#roofing"
@@ -162,10 +146,9 @@ function Home() {
                 </div>
               </div>
             </Link>
-          </div>
-          {/* Micro sezione sotto le cards */}
+            {/* Micro sezione sotto le cards */}
           <div className="mt-8 flex flex-col items-center gap-3 text-center">
-            <p className="max-w-2xl text-s text-slate-600 md:text-sm">
+            <p className="max-w-2xl text-s text-slate-600 md:text-sm lg:text-xl font-heading">
               Need something that doesn&apos;t fit into a single category? YB can
               combine services — from repairs and maintenance to garden work —
               so you don&apos;t have to coordinate multiple people for one project.
@@ -176,6 +159,7 @@ function Home() {
             >
               See all Services
             </Link>
+          </div>
           </div>
         </div>
       </section>

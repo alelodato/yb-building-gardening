@@ -1,6 +1,5 @@
 import furnitureImg from "/small-r.webp";
 import liningImg from "/lining.webp";
-import flooringImg from "/flooring.webp";
 import roofingImg from "/roofing.webp";
 import outdoorImg from "/garden1.webp";
 import combinedProjectsImg from "/multi-service.webp";
@@ -22,14 +21,6 @@ const services = [
     description:
       "Professional dry lining for both small and large projects. YB handles plasterboard installation, partition walls, ceiling systems, repairs, and smooth finishing ready for painting. A clean, precise service ideal for renovations, extensions, and new builds.",
     image: liningImg,
-  },
-  {
-    id: "flooring",
-    title: "Floor Installation & Repair",
-    short: "High quality flooring installation and repair for durable, clean, and perfectly finished interiors.",
-    description:
-      "From laminate to hardwood to vinyl, YB delivers high-quality flooring installation and repair. You get precise cutting, secure fitting, and a flawless finish that transforms any room. Ideal for home upgrades, renovations, and full room makeovers.",
-    image: flooringImg,
   },
   {
     id: "roofing",
@@ -69,7 +60,9 @@ export default function Services() {
           </h1>
           <p className="text-sm sm:text-base text-brand-dark/80 max-w-2xl">
             YB offers multi-service support handled by one trusted
-            professional. Choose the service that fits your project or combine
+            professional. 
+            <br />
+            Choose the service that fits your project or combine
             several for a complete, streamlined solution.
           </p>
         </header>
