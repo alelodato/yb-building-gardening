@@ -34,7 +34,7 @@ export default function BackToTop() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#1E40AF"   // blu elegante (Tailwind blue-900)
+                stroke="#020a23ff"   // blu elegante (Tailwind blue-900)
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
