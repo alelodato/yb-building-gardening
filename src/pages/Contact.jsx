@@ -93,7 +93,6 @@ function Contact() {
             >
               <option>Furnitures Assembly &amp; Small Repairs</option>
               <option>Dry Lining</option>
-              <option>Flooring Installation &amp; Repair</option>
               <option>Roofing &amp; Waterproofing</option>
               <option>Gardening &amp; outdoor care</option>
               <option>Multiple services / custom project</option>
