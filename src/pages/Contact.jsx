@@ -1,10 +1,17 @@
-// src/pages/Contact.jsx
 import { useLocation } from "react-router-dom";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
-function Contact() {
-  // Leggo eventuale stato passato dalle card dei servizi
+export default function Contact() {
+  // Stato passato dalle card dei servizi
   const location = useLocation();
   const { selectedService, messagePreset } = location.state || {};
+
+  // Ref per il form (serve a EmailJS)
+  const formRef = useRef(null);
+
+  const [isSending, setIsSending] = useState(false);
+  const [feedback, setFeedback] = useState(null);
 
   // Placeholder dinamico per la textarea
   const messagePlaceholder =
@@ -15,9 +22,36 @@ function Contact() {
   const defaultService =
     selectedService || "Furnitures Assembly & Small Repairs";
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setFeedback(null);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setFeedback("Thanks! Your request has been sent.");
+        // opzionale: reset del form
+        e.target.reset();
+      })
+      .catch(() => {
+        setFeedback(
+          "Sorry, something went wrong while sending your request. Please try again."
+        );
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
+
   return (
     <div className="bg-[url('/contact-bg.webp')] bg-cover bg-center">
-      <section className=" bg-gradient-to-tr from-black/90 to-black/70 w-full px-4 py-10 md:py-16">
+      <section className="bg-gradient-to-tr from-black/90 to-black/70 w-full px-4 py-10 md:py-16">
         <h1 className="mb-3 text-2xl font-semibold-heading text-brand-light md:text-4xl text-center mx-auto">
           Get a Free Quote
         </h1>
@@ -27,7 +61,11 @@ function Contact() {
           realistic timeline based on your project.
         </p>
 
-        <form className="space-y-5 rounded-xl bg-white p-6 shadow-card mx-auto max-w-3xl">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="space-y-5 rounded-xl bg-white p-6 shadow-card mx-auto max-w-3xl"
+        >
           <div className="grid gap-4 md:grid-cols-1">
             <div>
               <label
@@ -38,6 +76,7 @@ function Contact() {
               </label>
               <input
                 id="name"
+                name="user_name" // <-- EmailJS
                 type="text"
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
                 placeholder="Your name"
@@ -54,6 +93,7 @@ function Contact() {
               </label>
               <input
                 id="email"
+                name="user_email" // <-- EmailJS
                 type="email"
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
                 placeholder="you@example.com"
@@ -70,9 +110,10 @@ function Contact() {
               </label>
               <input
                 id="phone"
+                name="user_phone" // <-- EmailJS
                 type="tel"
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
-                placeholder="(+44) 1234 567 890"
+                placeholder="‪(+44) 1234 567 890‬"
               />
             </div>
           </div>
@@ -86,9 +127,9 @@ function Contact() {
             </label>
             <select
               id="service"
+              name="service" // <-- EmailJS
               className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
               required
-              // qui avviene la magia: se arrivi da una card, questo è già selezionato
               defaultValue={defaultService}
             >
               <option>Furnitures Assembly &amp; Small Repairs</option>
@@ -108,6 +149,7 @@ function Contact() {
             </label>
             <textarea
               id="message"
+              name="message" // <-- EmailJS
               rows={5}
               className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
               placeholder={messagePlaceholder}
@@ -116,14 +158,19 @@ function Contact() {
 
           <button
             type="submit"
-            className="inline-flex w-full justify-center rounded-full bg-brand-dark px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-black md:w-auto"
+            disabled={isSending}
+            className="inline-flex w-full justify-center rounded-full bg-brand-dark px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-black md:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            Send Request
+            {isSending ? "Sending..." : "Send Request"}
           </button>
+
+          {feedback && (
+            <p className="text-center text-xs md:text-sm text-slate-700">
+              {feedback}
+            </p>
+          )}
         </form>
       </section>
     </div>
   );
 }
-
-export default Contact;
