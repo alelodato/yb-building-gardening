@@ -9,8 +9,9 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center mb-8">
           <img src='/Logo.png' alt="YB Building & Gardening" className="w-28 mb-3" />
 
-          <p className="text-dark font-body text-sm">email@mail.com</p>
-          <p className="text-dark font-body text-sm"><a href="tel:+447860719081" className="font-semibold">07860 719081</a></p>
+          <p className="text-dark font-body text-sm">ybpropertyservicesinfo@gmail.com</p>
+          <p className="text-dark font-body text-sm"><a href="https://wa.me/447990691995"
+          target="_blank" className="font-semibold">07990691995</a></p>
           <p className="text-dark font-body text-sm">Cambridge, UK</p>
         </div>
 

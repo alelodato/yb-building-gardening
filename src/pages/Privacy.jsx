@@ -23,7 +23,7 @@ export default function PrivacyPage() {
             <p className="mt-2">
               If you have any questions about this Privacy Policy or how we handle your
               data, you can contact us at: <br />
-              Email: <span className="font-medium">[[contact email]]</span> <br />
+              Email: <span className="font-medium">ybpropertyservicesinfo@gmail.com</span> <br />
               Location: <span className="font-medium">Cambridge, UK</span>
             </p>
           </section>
@@ -94,9 +94,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               We keep personal data only as long as necessary for the purposes described
-              in this Policy. Contact form messages are typically stored for up to
-              [[X months]] after our last interaction, unless we start an ongoing working
-              relationship. Certain records may be kept longer where required by law.
+              in this Policy. Certain records may be kept longer where required by law.
             </p>
           </section>
 
@@ -137,7 +135,7 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-2">
               To exercise these rights, you can contact us at{" "}
-              <span className="font-medium">[[contact email]]</span>. You also have
+              <span className="font-medium">ybpropertyservicesinfo@gmail.com</span>. You also have
               the right to lodge a complaint with your local data protection authority.
             </p>
           </section>
@@ -186,7 +184,7 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-2">
               YB Building &amp; Gardening <br />
-              Email: <span className="font-medium">[[contact email]]</span> <br />
+              Email: <span className="font-medium">ybpropertyservicesinfo@gmail.com</span> <br />
               Location: <span className="font-medium">Cambridge, UK</span>
             </p>
           </section>
