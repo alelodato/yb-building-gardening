@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   // Stato passato dalle card dei servizi
@@ -22,31 +21,21 @@ export default function Contact() {
   const defaultService =
     selectedService || "Furnitures Assembly & Small Repairs";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSending(true);
-    setFeedback(null);
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setFeedback("Thanks! Your request has been sent.");
-        // opzionale: reset del form
-        e.target.reset();
-      })
-      .catch(() => {
-        setFeedback(
-          "Sorry, something went wrong while sending your request. Please try again."
-        );
-      })
-      .finally(() => {
-        setIsSending(false);
-      });
+    const formData = new FormData(e.target);
+    formData.append("access_key", "9c050044-a03d-4941-b07c-f44eff195c51");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      console.log("Message sent!");
+    }
   };
 
   return (
@@ -62,10 +51,14 @@ export default function Contact() {
         </p>
 
         <form
-          ref={formRef}
-          onSubmit={handleSubmit}
           className="space-y-5 rounded-xl bg-white p-6 shadow-card mx-auto max-w-3xl"
+          action="https://api.web3forms.com/submit"
+          method="POST"
         >
+          <input type="hidden" name="access_key" value="9c050044-a03d-4941-b07c-f44eff195c51" />
+          <input type="hidden" name="subject" value="New Service Request" />
+          <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+          <input type="hidden" name="from_name" value="YB Property Services Website" />
           <div className="grid gap-4 md:grid-cols-1">
             <div>
               <label
@@ -76,7 +69,7 @@ export default function Contact() {
               </label>
               <input
                 id="name"
-                name="user_name" // <-- EmailJS
+                name="name"
                 type="text"
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
                 placeholder="Your name"
@@ -93,7 +86,7 @@ export default function Contact() {
               </label>
               <input
                 id="email"
-                name="user_email" // <-- EmailJS
+                name="email"
                 type="email"
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
                 placeholder="you@example.com"
@@ -110,7 +103,7 @@ export default function Contact() {
               </label>
               <input
                 id="phone"
-                name="user_phone" // <-- EmailJS
+                name="phone" // <-- EmailJS
                 type="tel"
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark"
                 placeholder="‪(+44) 1234 567 890‬"
