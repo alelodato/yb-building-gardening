@@ -134,6 +134,12 @@ function Navbar() {
                 <NavLink to="/services" className={mobileLinkClasses} onClick={closeMenu}>
                   Services
                 </NavLink>
+                <NavLink to="/building" className={mobileLinkClasses} onClick={closeMenu}>
+                  Building
+                </NavLink>
+                <NavLink to="/gardening" className={mobileLinkClasses} onClick={closeMenu}>
+                  Gardening
+                </NavLink>
                 <NavLink to="/contact" className={mobileLinkClasses} onClick={closeMenu}>
                   Contact
                 </NavLink>
