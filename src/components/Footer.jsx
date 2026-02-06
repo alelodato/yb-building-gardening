@@ -21,7 +21,7 @@ export default function Footer() {
           <Link to="/privacy" className="hover:text-brand-red transition-colors">Privacy Policy</Link>
         </div>
 
-        {/* SOCIAL ICONS */}
+        {/* SOCIAL ICONS 
         <div className="flex gap-6 mb-6">
           <a href="#" aria-label="Instagram" className="text-dark hover:text-brand-green transition-colors text-xl">
            <i className="fa-brands fa-instagram"></i>
@@ -32,13 +32,13 @@ export default function Footer() {
           <a href="#" aria-label="Facebook" className="text-dark hover:text-brand-green transition-colors text-xl">
           <i className="fa-brands fa-facebook-f"></i>
           </a>
-        </div>
+        </div>*/}
 
-        {/* BOTTOM */}
+       {/* BOTTOM 
         <p className="text-dark/60 text-xs font-body">
         Website by
         <a href="https://www.alessiolodato.dev" target="_blank" rel="noopener noreferrer" className="text-sm"> Alessio Lodato</a>
-        </p>
+        </p> */}
       </div>
     </footer>
   );
